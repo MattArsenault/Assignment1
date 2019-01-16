@@ -66,10 +66,42 @@ public class Assignment1Test {
     }
     
     public void testEmptyStringShouldReturnEmptyString() {
-    
+       System.out.println("stringPower");
        String s = "";
        int a = 1;
-       
-       String result = stringPower(s,a);
+       String expResult = "";
+       String result = Assignment1.stringPower(s, a);
+       assertEquals(expResult, result);
+       fail("The test case is a prototype.");
+    }
+    
+    public void testLessThanOneShouldReturnNull(){
+       System.out.println("stringPower");
+       String s = "";
+       int a = -1;
+       String expResult = "";
+       String result = Assignment1.stringPower(s, a);
+       assertEquals(expResult, result);
+       fail("The test case is a prototype.");
+    }
+    
+    public void testStringAndOneShouldReturnString(){
+       System.out.println("stringPower");
+       String s = "Hello";
+       int a = 1;
+       String expResult = "Hello";
+       String result = Assignment1.stringPower(s, a);
+       assertEquals(expResult, result);
+       fail("The test case is a prototype.");
+    }
+    
+    public void testStringAndTwoShouldReturnStringDoubled(){
+       System.out.println("stringPower");
+       String s = "bob";
+       int a = 2;
+       String expResult = "bobbob";
+       String result = Assignment1.stringPower(s, a);
+       assertEquals(expResult, result);
+       fail("The test case is a prototype.");
     }
 }
